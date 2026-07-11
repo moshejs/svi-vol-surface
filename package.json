@@ -1,0 +1,55 @@
+{
+  "name": "svi-vol-surface",
+  "version": "1.0.0",
+  "description": "Gatheral SVI implied-volatility surface — raw/natural/jump-wings parametrizations, total variance, butterfly & calendar arbitrage checks, and smile calibration. Zero dependencies.",
+  "keywords": [
+    "svi",
+    "gatheral",
+    "volatility-surface",
+    "implied-volatility",
+    "arbitrage-free",
+    "volatility-smile",
+    "options",
+    "quant",
+    "quantitative-finance",
+    "derivatives",
+    "finance"
+  ],
+  "homepage": "https://moshemalka.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/moshejs/svi-vol-surface.git"
+  },
+  "bugs": "https://github.com/moshejs/svi-vol-surface/issues",
+  "author": "Moshe Malka <hello@moshemalka.com> (https://moshemalka.com)",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.2.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
