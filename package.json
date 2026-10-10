@@ -1,7 +1,7 @@
 {
   "name": "svi-vol-surface",
   "version": "1.0.0",
-  "description": "Gatheral SVI implied-volatility surface — raw/natural/jump-wings parametrizations, total variance, butterfly & calendar arbitrage checks, and smile calibration. Zero dependencies.",
+  "description": "Gatheral SVI implied-volatility surface — raw/natural/jump-wings parametrizations and conversions, total variance, butterfly & calendar arbitrage checks, and quasi-explicit smile calibration. Zero dependencies.",
   "keywords": [
     "svi",
     "gatheral",
@@ -29,10 +29,16 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"
