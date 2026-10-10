@@ -1,6 +1,6 @@
 {
   "name": "svi-vol-surface",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Gatheral SVI implied-volatility surface — raw/natural/jump-wings parametrizations and conversions, total variance, butterfly & calendar arbitrage checks, and quasi-explicit smile calibration. Zero dependencies.",
   "keywords": [
     "svi",
